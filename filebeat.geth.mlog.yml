@@ -1,6 +1,7 @@
 filebeat.prospectors:
 - input_type: log
   paths:
+  # can also use wildcards, eg. *.log
     - /Users/ia/Library/EthereumClassic/mlogs/geth.log
   symlinks: true
 output.logstash:
