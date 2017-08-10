@@ -1,0 +1,8 @@
+filebeat.prospectors:
+- input_type: log
+  paths:
+    - /Users/ia/Library/EthereumClassic/mlogs/geth.json.log
+  symlinks: true
+  json.keys_under_root: true
+output.logstash:
+  hosts: ["localhost:5043"]
