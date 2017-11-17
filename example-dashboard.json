@@ -1,0 +1,19 @@
+[
+  {
+    "_id": "2c2dd6a0-7e04-11e7-a384-fd325ddfb065",
+    "_type": "dashboard",
+    "_source": {
+      "title": "Geth MLog Dash1",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"col\":1,\"id\":\"fc39d660-7e03-11e7-a384-fd325ddfb065\",\"panelIndex\":1,\"row\":3,\"size_x\":6,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"3252e880-7e05-11e7-a384-fd325ddfb065\",\"panelIndex\":3,\"row\":5,\"size_x\":6,\"size_y\":2,\"type\":\"visualization\"},{\"col\":4,\"id\":\"4fd46ff0-cb3f-11e7-9d85-d340cd698212\",\"panelIndex\":9,\"row\":1,\"size_x\":3,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"9244f3a0-cb3f-11e7-9d85-d340cd698212\",\"panelIndex\":10,\"row\":1,\"size_x\":3,\"size_y\":2,\"type\":\"visualization\"},{\"col\":7,\"id\":\"1bb52aa0-cb41-11e7-9d85-d340cd698212\",\"panelIndex\":11,\"row\":3,\"size_x\":6,\"size_y\":2,\"type\":\"visualization\"},{\"col\":7,\"id\":\"fa0e6690-cb41-11e7-9d85-d340cd698212\",\"panelIndex\":12,\"row\":5,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":7,\"id\":\"ed357050-cb3f-11e7-9d85-d340cd698212\",\"panelIndex\":13,\"row\":1,\"size_x\":6,\"size_y\":2,\"type\":\"visualization\"}]",
+      "optionsJSON": "{\"darkTheme\":true}",
+      "uiStateJSON": "{\"P-1\":{\"vis\":{\"legendOpen\":true}},\"P-13\":{\"spy\":{\"mode\":{\"fill\":false,\"name\":null}}}}",
+      "version": 1,
+      "timeRestore": false,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}}}]}"
+      }
+    }
+  }
+]
