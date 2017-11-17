@@ -18,3 +18,17 @@ You should be able to Import this file to setup the searches
 
 
 ![example](./block-write-search-example.png)
+
+----
+
+> etcstats.net
+```
+# not sure ws is required
+geth --ws --ws-port=3000 --rpc
+
+# go to the net stats thingey
+cd dev/etc/net-stats-api-eth-whatever
+npm install
+env WS_SERVER=rpc.etcstats.net WS_SECRET=5ceuMix4qSM6APj7QwTPU npm start app.json
+```
+
