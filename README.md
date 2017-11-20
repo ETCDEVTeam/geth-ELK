@@ -1,48 +1,59 @@
 ## Instructions
 
-install `filebeat`, `logstash`, `elasticsearch`, and `kibana`. i know, it's
-a lot. if you're not on OSX, you're on your own here.
+Install `filebeat`, `logstash`, `elasticsearch`, and `kibana`.
 ```
 brew install filebeat logstash elasticsearch kibana
 ```
 
-turn geth on.
-> terminal 1
+#### Geth
+Turn geth on. The only required flag here is `--mlog`, and I'm using `=json`
+because I've found it easier to move through logstash (don't have to `grok`
+nearly as much).
+> Terminal 1
 ```
-geth --mlog=json --log-status="sync=10" --cache 100 --log-dir=`d Class`/mainnet/log --rpc --ws --ws-port=3000 --verbosity 6
+geth --mlog=json --log-status="sync=10" --cache 100 --log-dir=~/LibraryEthereumClassic/mainnet/log --rpc --ws --ws-port=3000 --verbosity 6
 ```
+:arrow_down:
 
-turn filebeat on.
-> terminal 2
+#### Filebeat
+Run from geth-ELK repo, eg., use this repo's logstash config file instead of the default config
+file, or move/copy it to filebeat's config dir (`/usr/local/etc/filebeat`).
+filebeat -e -c
+> Terminal 2
 ```
-# $(pwd) == cd geth-ELK repo, eg., use this file instead of the default config
-# file
-filebeat -e -c $(pwd)/filebeat.geth.mlog.json.yml -d "publish"
+# $(pwd) == cd $(pwd)/filebeat.geth.mlog.json.yml -d "publish"
 ```
+:arrow_down:
 
-turn logstash on. again, this should use _this_ file, not the default config.
-you can either copy/rename this file to the default logstash config dir, or use
+#### Logstash
+Turn logstash on. Again, this should use _this repo's_ config file, not the default config.
+You can either copy/rename this file to the default logstash config dir, or use
 it relatively from the command.
-> terminal 3
+> Terminal 3
 ```
 logstash -f ls-pipeline-json.conf --config.reload.automatic
 ```
+:arrow_down:
 
-turn elastic search on.
-> terminal 4
+#### Elasticsearch
+Turn elastic search on.
+> Terminal 4
 ```
 elasticsearch
 ```
+:arrow_down:
 
-turn kibana on.
-> terminal 5
+#### Kibana
+Turn kibana on.
+> Terminal 5
 ```
 kibana
 ```
+:arrow_down:
 
 Now you can open `localhost:5601` in the browser and find kibana.
 
-You may need to create an index on `logstash-*`.
+You may need to use management->indexes to create indexes for `logstash-*`.
 
 
 ----
