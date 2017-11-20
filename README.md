@@ -1,3 +1,53 @@
+## Instructions
+
+install `filebeat`, `logstash`, `elasticsearch`, and `kibana`. i know, it's
+a lot. if you're not on OSX, you're on your own here.
+```
+brew install filebeat logstash elasticsearch kibana
+```
+
+turn geth on.
+> terminal 1
+```
+geth --mlog=json --log-status="sync=10" --cache 100 --log-dir=`d Class`/mainnet/log --rpc --ws --ws-port=3000 --verbosity 6
+```
+
+turn filebeat on.
+> terminal 2
+```
+# $(pwd) == cd geth-ELK repo, eg., use this file instead of the default config
+# file
+filebeat -e -c $(pwd)/filebeat.geth.mlog.json.yml -d "publish"
+```
+
+turn logstash on. again, this should use _this_ file, not the default config.
+you can either copy/rename this file to the default logstash config dir, or use
+it relatively from the command.
+> terminal 3
+```
+logstash -f ls-pipeline-json.conf --config.reload.automatic
+```
+
+turn elastic search on.
+> terminal 4
+```
+elasticsearch
+```
+
+turn kibana on.
+> terminal 5
+```
+kibana
+```
+
+Now you can open `localhost:5601` in the browser and find kibana.
+
+You may need to create an index on `logstash-*`.
+
+
+----
+
+
 Reference documents for setting up ELK with geth's forthcoming `mlog`
 implementation.
 
