@@ -21,7 +21,9 @@ file, or move/copy it to filebeat's config dir (`/usr/local/etc/filebeat`).
 filebeat -e -c
 > Terminal 2
 ```
-# $(pwd) == cd $(pwd)/filebeat.geth.mlog.json.yml -d "publish"
+echo $(pwd)
+> ~/dev/geth-ELK
+filebeat -e -c $(pwd)/filebeat.geth.mlog.json.yml -d "publish"
 ```
 :arrow_down:
 
