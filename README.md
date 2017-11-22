@@ -1,3 +1,5 @@
+## Overview
+
 ## Instructions
 
 Install `filebeat`, `logstash`, `elasticsearch`, and `kibana`.
@@ -6,19 +8,28 @@ brew install filebeat logstash elasticsearch kibana
 ```
 
 #### Geth
-Turn geth on. The only required flag here is `--mlog`, and I'm using `=json`
+Turn geth on. The only required flag here is `--mlog`, though of course you can
+use any others as well. I'm using `=json`
 because I've found it easier to move through logstash (don't have to `grok`
 nearly as much).
+
+Geth writes mlogs by default to `/Users/you/EthereumClassic/mainnet/mlogs`. You
+can change this directory with the `--mlog-dir=</path/to/mlogs>` flag. The
+default is assumed in the Filebeat config `filebeat.geth.mlog.json.yml`.
 > Terminal 1
 ```
-geth --mlog=json --log-status="sync=10" --cache 100 --log-dir=~/LibraryEthereumClassic/mainnet/log --rpc --ws --ws-port=3000 --verbosity 6
+geth --mlog=json
 ```
 :arrow_down:
 
 #### Filebeat
 Run from geth-ELK repo, eg., use this repo's logstash config file instead of the default config
 file, or move/copy it to filebeat's config dir (`/usr/local/etc/filebeat`).
-filebeat -e -c
+
+Note that `filebeat.geth.mlog.json.yml` uses an input `path` with a wildcard
+for convenience.
+
+Filebeat publishes to Logstash on port `5043`.
 > Terminal 2
 ```
 echo $(pwd)
@@ -31,6 +42,8 @@ filebeat -e -c $(pwd)/filebeat.geth.mlog.json.yml -d "publish"
 Turn logstash on. Again, this should use _this repo's_ config file, not the default config.
 You can either copy/rename this file to the default logstash config dir, or use
 it relatively from the command.
+
+Logstash publishes to Elasticsearch on port `9200`.
 > Terminal 3
 ```
 logstash -f ls-pipeline-json.conf --config.reload.automatic
@@ -39,6 +52,8 @@ logstash -f ls-pipeline-json.conf --config.reload.automatic
 
 #### Elasticsearch
 Turn elastic search on.
+
+Elasticsearch connects on `9200`.
 > Terminal 4
 ```
 elasticsearch
@@ -47,6 +62,8 @@ elasticsearch
 
 #### Kibana
 Turn kibana on.
+
+Kibana connects with Elasticsearch on `9200`, and publishes on `5601`.
 > Terminal 5
 ```
 kibana
