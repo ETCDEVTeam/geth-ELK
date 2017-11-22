@@ -1,0 +1,142 @@
+[
+  {
+    "_id": "ef20b5d0-7d30-11e7-a892-1946b531439b",
+    "_type": "search",
+    "_source": {
+      "title": "SERVER ADD PEER",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "verb"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"filter\":[{\"meta\":{\"negate\":false,\"index\":\"logstash-*\",\"key\":\"verb\",\"value\":\"ADD\",\"disabled\":false,\"alias\":null},\"query\":{\"match\":{\"verb\":{\"query\":\"ADD\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}},{\"meta\":{\"negate\":false,\"index\":\"logstash-*\",\"key\":\"subject\",\"value\":\"PEER\",\"disabled\":false,\"alias\":null},\"query\":{\"match\":{\"subject\":{\"query\":\"PEER\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}},{\"meta\":{\"negate\":false,\"index\":\"logstash-*\",\"key\":\"receiver\",\"value\":\"SERVER\",\"disabled\":false,\"alias\":null},\"query\":{\"match\":{\"receiver\":{\"query\":\"SERVER\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647}}"
+      }
+    }
+  },
+  {
+    "_id": "a44ba5a0-7d31-11e7-a892-1946b531439b",
+    "_type": "search",
+    "_source": {
+      "title": "WRITE BLOCK",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "verb"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"filter\":[{\"meta\":{\"negate\":false,\"index\":\"logstash-*\",\"key\":\"subject\",\"value\":\"BLOCK\",\"disabled\":false,\"alias\":null},\"query\":{\"match\":{\"subject\":{\"query\":\"BLOCK\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}},{\"meta\":{\"negate\":false,\"index\":\"logstash-*\",\"key\":\"verb\",\"value\":\"WRITE\",\"disabled\":false,\"alias\":null},\"query\":{\"match\":{\"verb\":{\"query\":\"WRITE\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647}}"
+      }
+    }
+  },
+  {
+    "_id": "3f752330-7d4b-11e7-8eb5-09ac1751a044",
+    "_type": "search",
+    "_source": {
+      "title": "SERVER.PEER_COUNT",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "SERVER.PEER_COUNT"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647},\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}}}"
+      }
+    }
+  },
+  {
+    "_id": "09bdc990-7dcd-11e7-a384-fd325ddfb065",
+    "_type": "search",
+    "_source": {
+      "title": "p2p.connected.num_connections",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "p2p.connected.num_connections"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}},\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647}}"
+      }
+    }
+  },
+  {
+    "_id": "7c880f30-7e04-11e7-a384-fd325ddfb065",
+    "_type": "search",
+    "_source": {
+      "title": "event:server.remove.peer",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "event"
+      ],
+      "sort": [
+        "ts",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"query\":{\"query_string\":{\"query\":\"event:server.remove.peer\",\"analyze_wildcard\":true}},\"filter\":[{\"meta\":{\"negate\":false,\"index\":\"logstash-*\",\"key\":\"event\",\"value\":\"server.remove.peer\",\"disabled\":false,\"alias\":null},\"query\":{\"match\":{\"event\":{\"query\":\"server.remove.peer\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647}}"
+      }
+    }
+  },
+  {
+    "_id": "98638060-cb41-11e7-9d85-d340cd698212",
+    "_type": "search",
+    "_source": {
+      "title": "eventys",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "event"
+      ],
+      "sort": [
+        "ts",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}},\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647}}"
+      }
+    }
+  },
+  {
+    "_id": "44dbee20-cb6c-11e7-90fb-2dc563d1a10a",
+    "_type": "search",
+    "_source": {
+      "title": "event",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "event"
+      ],
+      "sort": [
+        "ts",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}},\"filter\":[{\"$state\":{\"store\":\"appState\"},\"exists\":{\"field\":\"event\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"logstash-*\",\"key\":\"exists\",\"negate\":false,\"value\":\"event\"}}],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647}}"
+      }
+    }
+  }
+]
