@@ -1,258 +1,5 @@
 [
   {
-    "_id": "8ff91190-7d50-11e7-85e9-77be8b9c4d82",
-    "_type": "dashboard",
-    "_source": {
-      "title": "New Dashboard",
-      "hits": 0,
-      "description": "",
-      "panelsJSON": "[{\"size_x\":5,\"size_y\":2,\"panelIndex\":1,\"type\":\"visualization\",\"id\":\"0dc9aef0-7d4b-11e7-8eb5-09ac1751a044\",\"col\":1,\"row\":1},{\"size_x\":6,\"size_y\":2,\"panelIndex\":2,\"type\":\"visualization\",\"id\":\"60d4afa0-7d4b-11e7-8eb5-09ac1751a044\",\"col\":6,\"row\":1}]",
-      "optionsJSON": "{\"darkTheme\":false}",
-      "uiStateJSON": "{\"P-2\":{\"vis\":{\"legendOpen\":false},\"spy\":{\"mode\":{\"name\":null,\"fill\":false}}},\"P-1\":{\"spy\":{\"mode\":{\"name\":null,\"fill\":false}}}}",
-      "version": 1,
-      "timeRestore": false,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"filter\":[{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}}}]}"
-      }
-    }
-  },
-  {
-    "_id": "2c2dd6a0-7e04-11e7-a384-fd325ddfb065",
-    "_type": "dashboard",
-    "_source": {
-      "title": "Geth MLog Dash1",
-      "hits": 0,
-      "description": "",
-      "panelsJSON": "[{\"col\":1,\"id\":\"3252e880-7e05-11e7-a384-fd325ddfb065\",\"panelIndex\":3,\"row\":15,\"size_x\":6,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"9244f3a0-cb3f-11e7-9d85-d340cd698212\",\"panelIndex\":10,\"row\":1,\"size_x\":4,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"99453a90-cb51-11e7-8afb-df93034071b4\",\"panelIndex\":14,\"row\":17,\"size_x\":6,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"16f64100-cb57-11e7-8afb-df93034071b4\",\"panelIndex\":15,\"row\":22,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"73cf3220-cb6a-11e7-94f6-478d62c5fa59\",\"panelIndex\":17,\"row\":11,\"size_x\":6,\"size_y\":2,\"type\":\"visualization\"},{\"col\":5,\"id\":\"4a3dd710-cb6d-11e7-90fb-2dc563d1a10a\",\"panelIndex\":19,\"row\":1,\"size_x\":3,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"69805210-cb7c-11e7-90fb-2dc563d1a10a\",\"panelIndex\":21,\"row\":13,\"size_x\":6,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"f2ccad60-cb7d-11e7-90fb-2dc563d1a10a\",\"panelIndex\":23,\"row\":47,\"size_x\":12,\"size_y\":4,\"type\":\"visualization\"},{\"col\":1,\"id\":\"a488de70-cb8d-11e7-9d69-3f936a8e192c\",\"panelIndex\":25,\"row\":8,\"size_x\":12,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"2bb12140-cb8f-11e7-9d69-3f936a8e192c\",\"panelIndex\":26,\"row\":20,\"size_x\":6,\"size_y\":2,\"type\":\"visualization\"},{\"col\":7,\"id\":\"d70566e0-cba4-11e7-b25f-6b2fc206724d\",\"panelIndex\":27,\"row\":11,\"size_x\":6,\"size_y\":2,\"type\":\"visualization\"},{\"col\":8,\"id\":\"65ed31b0-cba7-11e7-9506-83f80dc472f7\",\"panelIndex\":28,\"row\":1,\"size_x\":3,\"size_y\":2,\"type\":\"visualization\"},{\"col\":7,\"id\":\"ea6e4fb0-cbb0-11e7-9506-83f80dc472f7\",\"panelIndex\":29,\"row\":13,\"size_x\":6,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"e581cb90-cbb4-11e7-9506-83f80dc472f7\",\"panelIndex\":30,\"row\":25,\"size_x\":12,\"size_y\":5,\"type\":\"visualization\"},{\"col\":1,\"id\":\"a81381d0-cbfb-11e7-b18b-cd2ae8165be1\",\"panelIndex\":31,\"row\":3,\"size_x\":12,\"size_y\":5,\"type\":\"visualization\"},{\"col\":8,\"id\":\"598002b0-cbff-11e7-b18b-cd2ae8165be1\",\"panelIndex\":32,\"row\":34,\"size_x\":5,\"size_y\":7,\"type\":\"visualization\"},{\"col\":1,\"id\":\"a41431f0-cc01-11e7-b18b-cd2ae8165be1\",\"panelIndex\":33,\"row\":43,\"size_x\":12,\"size_y\":4,\"type\":\"visualization\"},{\"col\":1,\"id\":\"6c8b0320-cc02-11e7-b18b-cd2ae8165be1\",\"panelIndex\":34,\"row\":34,\"size_x\":7,\"size_y\":7,\"type\":\"visualization\"},{\"col\":1,\"id\":\"de4288c0-cc03-11e7-b18b-cd2ae8165be1\",\"panelIndex\":35,\"row\":32,\"size_x\":12,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"ec3f2960-cc03-11e7-b18b-cd2ae8165be1\",\"panelIndex\":36,\"row\":41,\"size_x\":12,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"fd9bef80-cc04-11e7-b18b-cd2ae8165be1\",\"panelIndex\":37,\"row\":19,\"size_x\":12,\"size_y\":1,\"type\":\"visualization\"},{\"col\":7,\"id\":\"7a236f30-ccbc-11e7-91de-53bce0fb3b49\",\"panelIndex\":38,\"row\":22,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":7,\"id\":\"82512580-ccc1-11e7-91de-53bce0fb3b49\",\"panelIndex\":39,\"row\":20,\"size_x\":6,\"size_y\":2,\"type\":\"visualization\"},{\"col\":7,\"id\":\"30a167b0-ccc4-11e7-91de-53bce0fb3b49\",\"panelIndex\":40,\"row\":30,\"size_x\":6,\"size_y\":2,\"type\":\"visualization\"},{\"col\":7,\"id\":\"705a5c20-cd2a-11e7-8e6b-9f88aebacb6c\",\"panelIndex\":41,\"row\":15,\"size_x\":6,\"size_y\":2,\"type\":\"visualization\"}]",
-      "optionsJSON": "{\"darkTheme\":true}",
-      "uiStateJSON": "{\"P-14\":{\"vis\":{\"legendOpen\":false}},\"P-15\":{\"vis\":{\"legendOpen\":false}},\"P-17\":{\"vis\":{\"legendOpen\":false}},\"P-19\":{\"spy\":{\"mode\":{\"fill\":false,\"name\":null}}},\"P-21\":{\"vis\":{\"legendOpen\":false}},\"P-23\":{\"vis\":{\"legendOpen\":false}},\"P-26\":{\"vis\":{\"legendOpen\":false}},\"P-27\":{\"vis\":{\"legendOpen\":false}},\"P-29\":{\"vis\":{\"legendOpen\":false}},\"P-3\":{\"vis\":{\"legendOpen\":false}},\"P-30\":{\"mapCenter\":[35.02999636902566,-1.58203125],\"mapZoom\":2},\"P-32\":{\"spy\":{\"mode\":{\"fill\":false,\"name\":null}},\"vis\":{\"params\":{\"sort\":{\"columnIndex\":1,\"direction\":\"desc\"}}}},\"P-38\":{\"vis\":{\"legendOpen\":false}},\"P-39\":{\"vis\":{\"legendOpen\":false}},\"P-41\":{\"vis\":{\"legendOpen\":false}}}",
-      "version": 1,
-      "timeRestore": false,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"filter\":[{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}}}]}"
-      }
-    }
-  },
-  {
-    "_id": "98876010-cd86-11e7-b1d1-d72fcd73a57d",
-    "_type": "dashboard",
-    "_source": {
-      "title": "geth-minersAndAccounts-status",
-      "hits": 0,
-      "description": "",
-      "panelsJSON": "[{\"col\":8,\"id\":\"598002b0-cbff-11e7-b18b-cd2ae8165be1\",\"panelIndex\":32,\"row\":34,\"size_x\":5,\"size_y\":7,\"type\":\"visualization\"},{\"col\":1,\"id\":\"a41431f0-cc01-11e7-b18b-cd2ae8165be1\",\"panelIndex\":33,\"row\":43,\"size_x\":12,\"size_y\":4,\"type\":\"visualization\"},{\"col\":1,\"id\":\"6c8b0320-cc02-11e7-b18b-cd2ae8165be1\",\"panelIndex\":34,\"row\":34,\"size_x\":7,\"size_y\":7,\"type\":\"visualization\"},{\"col\":1,\"id\":\"de4288c0-cc03-11e7-b18b-cd2ae8165be1\",\"panelIndex\":35,\"row\":32,\"size_x\":12,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"ec3f2960-cc03-11e7-b18b-cd2ae8165be1\",\"panelIndex\":36,\"row\":41,\"size_x\":12,\"size_y\":2,\"type\":\"visualization\"}]",
-      "optionsJSON": "{\"darkTheme\":true}",
-      "uiStateJSON": "{\"P-32\":{\"spy\":{\"mode\":{\"fill\":false,\"name\":null}},\"vis\":{\"params\":{\"sort\":{\"columnIndex\":1,\"direction\":\"desc\"}}}}}",
-      "version": 1,
-      "timeRestore": false,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"filter\":[{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}}}]}"
-      }
-    }
-  },
-  {
-    "_id": "345002a0-cd86-11e7-b1d1-d72fcd73a57d",
-    "_type": "dashboard",
-    "_source": {
-      "title": "geth-client/network-status",
-      "hits": 0,
-      "description": "",
-      "panelsJSON": "[{\"col\":1,\"id\":\"3252e880-7e05-11e7-a384-fd325ddfb065\",\"panelIndex\":3,\"row\":18,\"size_x\":12,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"9244f3a0-cb3f-11e7-9d85-d340cd698212\",\"panelIndex\":10,\"row\":1,\"size_x\":4,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"99453a90-cb51-11e7-8afb-df93034071b4\",\"panelIndex\":14,\"row\":14,\"size_x\":12,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"16f64100-cb57-11e7-8afb-df93034071b4\",\"panelIndex\":15,\"row\":29,\"size_x\":12,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"73cf3220-cb6a-11e7-94f6-478d62c5fa59\",\"panelIndex\":17,\"row\":8,\"size_x\":12,\"size_y\":2,\"type\":\"visualization\"},{\"col\":5,\"id\":\"4a3dd710-cb6d-11e7-90fb-2dc563d1a10a\",\"panelIndex\":19,\"row\":1,\"size_x\":3,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"69805210-cb7c-11e7-90fb-2dc563d1a10a\",\"panelIndex\":21,\"row\":22,\"size_x\":12,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"f2ccad60-cb7d-11e7-90fb-2dc563d1a10a\",\"panelIndex\":23,\"row\":37,\"size_x\":12,\"size_y\":4,\"type\":\"visualization\"},{\"col\":1,\"id\":\"2bb12140-cb8f-11e7-9d69-3f936a8e192c\",\"panelIndex\":26,\"row\":27,\"size_x\":12,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"d70566e0-cba4-11e7-b25f-6b2fc206724d\",\"panelIndex\":27,\"row\":10,\"size_x\":12,\"size_y\":2,\"type\":\"visualization\"},{\"col\":8,\"id\":\"65ed31b0-cba7-11e7-9506-83f80dc472f7\",\"panelIndex\":28,\"row\":1,\"size_x\":3,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"ea6e4fb0-cbb0-11e7-9506-83f80dc472f7\",\"panelIndex\":29,\"row\":24,\"size_x\":12,\"size_y\":2,\"type\":\"visualization\"},{\"col\":7,\"id\":\"e581cb90-cbb4-11e7-9506-83f80dc472f7\",\"panelIndex\":30,\"row\":32,\"size_x\":6,\"size_y\":5,\"type\":\"visualization\"},{\"col\":1,\"id\":\"a81381d0-cbfb-11e7-b18b-cd2ae8165be1\",\"panelIndex\":31,\"row\":3,\"size_x\":12,\"size_y\":5,\"type\":\"visualization\"},{\"col\":1,\"id\":\"fd9bef80-cc04-11e7-b18b-cd2ae8165be1\",\"panelIndex\":37,\"row\":26,\"size_x\":12,\"size_y\":1,\"type\":\"visualization\"},{\"col\":1,\"id\":\"7a236f30-ccbc-11e7-91de-53bce0fb3b49\",\"panelIndex\":38,\"row\":20,\"size_x\":12,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"82512580-ccc1-11e7-91de-53bce0fb3b49\",\"panelIndex\":39,\"row\":16,\"size_x\":12,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"30a167b0-ccc4-11e7-91de-53bce0fb3b49\",\"panelIndex\":40,\"row\":32,\"size_x\":6,\"size_y\":5,\"type\":\"visualization\"},{\"col\":1,\"id\":\"705a5c20-cd2a-11e7-8e6b-9f88aebacb6c\",\"panelIndex\":41,\"row\":12,\"size_x\":12,\"size_y\":2,\"type\":\"visualization\"}]",
-      "optionsJSON": "{\"darkTheme\":true}",
-      "uiStateJSON": "{\"P-14\":{\"vis\":{\"legendOpen\":false}},\"P-15\":{\"vis\":{\"legendOpen\":false}},\"P-17\":{\"vis\":{\"legendOpen\":false}},\"P-19\":{\"spy\":{\"mode\":{\"fill\":false,\"name\":null}}},\"P-21\":{\"vis\":{\"legendOpen\":false}},\"P-23\":{\"vis\":{\"legendOpen\":false}},\"P-26\":{\"vis\":{\"legendOpen\":false}},\"P-27\":{\"vis\":{\"legendOpen\":false}},\"P-29\":{\"vis\":{\"legendOpen\":false}},\"P-3\":{\"vis\":{\"legendOpen\":false}},\"P-30\":{\"mapCenter\":[35.02999636902566,-1.58203125],\"mapZoom\":2},\"P-38\":{\"vis\":{\"legendOpen\":false}},\"P-39\":{\"vis\":{\"legendOpen\":false}},\"P-41\":{\"vis\":{\"legendOpen\":false}}}",
-      "version": 1,
-      "timeRestore": false,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"filter\":[{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}}}]}"
-      }
-    }
-  },
-  {
-    "_id": "ef20b5d0-7d30-11e7-a892-1946b531439b",
-    "_type": "search",
-    "_source": {
-      "title": "SERVER ADD PEER",
-      "description": "",
-      "hits": 0,
-      "columns": [
-        "verb"
-      ],
-      "sort": [
-        "@timestamp",
-        "desc"
-      ],
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"logstash-*\",\"filter\":[{\"meta\":{\"negate\":false,\"index\":\"logstash-*\",\"key\":\"verb\",\"value\":\"ADD\",\"disabled\":false,\"alias\":null},\"query\":{\"match\":{\"verb\":{\"query\":\"ADD\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}},{\"meta\":{\"negate\":false,\"index\":\"logstash-*\",\"key\":\"subject\",\"value\":\"PEER\",\"disabled\":false,\"alias\":null},\"query\":{\"match\":{\"subject\":{\"query\":\"PEER\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}},{\"meta\":{\"negate\":false,\"index\":\"logstash-*\",\"key\":\"receiver\",\"value\":\"SERVER\",\"disabled\":false,\"alias\":null},\"query\":{\"match\":{\"receiver\":{\"query\":\"SERVER\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647}}"
-      }
-    }
-  },
-  {
-    "_id": "a44ba5a0-7d31-11e7-a892-1946b531439b",
-    "_type": "search",
-    "_source": {
-      "title": "WRITE BLOCK",
-      "description": "",
-      "hits": 0,
-      "columns": [
-        "verb"
-      ],
-      "sort": [
-        "@timestamp",
-        "desc"
-      ],
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"logstash-*\",\"filter\":[{\"meta\":{\"negate\":false,\"index\":\"logstash-*\",\"key\":\"subject\",\"value\":\"BLOCK\",\"disabled\":false,\"alias\":null},\"query\":{\"match\":{\"subject\":{\"query\":\"BLOCK\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}},{\"meta\":{\"negate\":false,\"index\":\"logstash-*\",\"key\":\"verb\",\"value\":\"WRITE\",\"disabled\":false,\"alias\":null},\"query\":{\"match\":{\"verb\":{\"query\":\"WRITE\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647}}"
-      }
-    }
-  },
-  {
-    "_id": "3f752330-7d4b-11e7-8eb5-09ac1751a044",
-    "_type": "search",
-    "_source": {
-      "title": "SERVER.PEER_COUNT",
-      "description": "",
-      "hits": 0,
-      "columns": [
-        "SERVER.PEER_COUNT"
-      ],
-      "sort": [
-        "@timestamp",
-        "desc"
-      ],
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"logstash-*\",\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647},\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}}}"
-      }
-    }
-  },
-  {
-    "_id": "09bdc990-7dcd-11e7-a384-fd325ddfb065",
-    "_type": "search",
-    "_source": {
-      "title": "p2p.connected.num_connections",
-      "description": "",
-      "hits": 0,
-      "columns": [
-        "p2p.connected.num_connections"
-      ],
-      "sort": [
-        "@timestamp",
-        "desc"
-      ],
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"logstash-*\",\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}},\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647}}"
-      }
-    }
-  },
-  {
-    "_id": "7c880f30-7e04-11e7-a384-fd325ddfb065",
-    "_type": "search",
-    "_source": {
-      "title": "event:server.remove.peer",
-      "description": "",
-      "hits": 0,
-      "columns": [
-        "event"
-      ],
-      "sort": [
-        "ts",
-        "desc"
-      ],
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"logstash-*\",\"query\":{\"query_string\":{\"query\":\"event:server.remove.peer\",\"analyze_wildcard\":true}},\"filter\":[{\"meta\":{\"negate\":false,\"index\":\"logstash-*\",\"key\":\"event\",\"value\":\"server.remove.peer\",\"disabled\":false,\"alias\":null},\"query\":{\"match\":{\"event\":{\"query\":\"server.remove.peer\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647}}"
-      }
-    }
-  },
-  {
-    "_id": "98638060-cb41-11e7-9d85-d340cd698212",
-    "_type": "search",
-    "_source": {
-      "title": "eventys",
-      "description": "",
-      "hits": 0,
-      "columns": [
-        "event"
-      ],
-      "sort": [
-        "ts",
-        "desc"
-      ],
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"logstash-*\",\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}},\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647}}"
-      }
-    }
-  },
-  {
-    "_id": "44dbee20-cb6c-11e7-90fb-2dc563d1a10a",
-    "_type": "search",
-    "_source": {
-      "title": "event",
-      "description": "",
-      "hits": 0,
-      "columns": [
-        "event"
-      ],
-      "sort": [
-        "ts",
-        "desc"
-      ],
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"logstash-*\",\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}},\"filter\":[{\"$state\":{\"store\":\"appState\"},\"exists\":{\"field\":\"event\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"logstash-*\",\"key\":\"exists\",\"negate\":false,\"value\":\"event\"}}],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647}}"
-      }
-    }
-  },
-  {
-    "_id": "0dc9aef0-7d4b-11e7-8eb5-09ac1751a044",
-    "_type": "visualization",
-    "_source": {
-      "title": "WRITE BLOCK / TIME",
-      "visState": "{\"title\":\"WRITE BLOCK / TIME\",\"type\":\"line\",\"params\":{\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"showCircles\":true,\"interpolate\":\"linear\",\"scale\":\"linear\",\"drawLinesBetweenPoints\":true,\"radiusRatio\":9,\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"@timestamp\",\"interval\":\"s\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}}],\"listeners\":{}}",
-      "uiStateJSON": "{}",
-      "description": "",
-      "savedSearchId": "a44ba5a0-7d31-11e7-a892-1946b531439b",
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"filter\":[]}"
-      }
-    }
-  },
-  {
-    "_id": "60d4afa0-7d4b-11e7-8eb5-09ac1751a044",
-    "_type": "visualization",
-    "_source": {
-      "title": "[discover] / TIME",
-      "visState": "{\"title\":\"[discover] / TIME\",\"type\":\"line\",\"params\":{\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"showCircles\":true,\"interpolate\":\"linear\",\"scale\":\"linear\",\"drawLinesBetweenPoints\":true,\"radiusRatio\":9,\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"@timestamp\",\"interval\":\"s\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}}],\"listeners\":{}}",
-      "uiStateJSON": "{}",
-      "description": "",
-      "savedSearchId": "3f752330-7d4b-11e7-8eb5-09ac1751a044",
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"filter\":[]}"
-      }
-    }
-  },
-  {
-    "_id": "f74cfbd0-7d51-11e7-a569-6bd86901442a",
-    "_type": "visualization",
-    "_source": {
-      "title": "WRITE BLOCK / TIME",
-      "visState": "{\"title\":\"WRITE BLOCK / TIME\",\"type\":\"histogram\",\"params\":{\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"scale\":\"linear\",\"mode\":\"stacked\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"@timestamp\",\"interval\":\"s\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}}],\"listeners\":{}}",
-      "uiStateJSON": "{}",
-      "description": "",
-      "savedSearchId": "a44ba5a0-7d31-11e7-a892-1946b531439b",
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"filter\":[]}"
-      }
-    }
-  },
-  {
     "_id": "512004b0-7dcd-11e7-a384-fd325ddfb065",
     "_type": "visualization",
     "_source": {
@@ -319,20 +66,6 @@
       "title": "avg block size",
       "visState": "{\"title\":\"avg block size\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"2\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"block.size\"}}],\"listeners\":{}}",
       "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
-      "description": "",
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"logstash-*\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
-      }
-    }
-  },
-  {
-    "_id": "9244f3a0-cb3f-11e7-9d85-d340cd698212",
-    "_type": "visualization",
-    "_source": {
-      "title": "maxblocknumber",
-      "visState": "{\"title\":\"maxblocknumber\",\"type\":\"metric\",\"params\":{\"handleNoResults\":true,\"fontSize\":60},\"aggs\":[{\"id\":\"2\",\"enabled\":true,\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"block.number\"}}],\"listeners\":{}}",
-      "uiStateJSON": "{}",
       "description": "",
       "version": 1,
       "kibanaSavedObjectMeta": {
@@ -497,20 +230,6 @@
     }
   },
   {
-    "_id": "4a3dd710-cb6d-11e7-90fb-2dc563d1a10a",
-    "_type": "visualization",
-    "_source": {
-      "title": "server.peercount(average)",
-      "visState": "{\"title\":\"server.peercount(average)\",\"type\":\"metric\",\"params\":{\"handleNoResults\":true,\"fontSize\":60},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"server.peer_count\"}}],\"listeners\":{}}",
-      "uiStateJSON": "{}",
-      "description": "",
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"logstash-*\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
-      }
-    }
-  },
-  {
     "_id": "3252e880-7e05-11e7-a384-fd325ddfb065",
     "_type": "visualization",
     "_source": {
@@ -572,20 +291,6 @@
     "_source": {
       "title": "offset/time",
       "visState": "{\"title\":\"offset/time\",\"type\":\"histogram\",\"params\":{\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"scale\":\"linear\",\"mode\":\"stacked\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"offset\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"ts\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}}],\"listeners\":{}}",
-      "uiStateJSON": "{}",
-      "description": "",
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"logstash-*\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
-      }
-    }
-  },
-  {
-    "_id": "65ed31b0-cba7-11e7-9506-83f80dc472f7",
-    "_type": "visualization",
-    "_source": {
-      "title": "block.uncles",
-      "visState": "{\"title\":\"block.uncles\",\"type\":\"metric\",\"params\":{\"handleNoResults\":true,\"fontSize\":60},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"block.uncles\"}}],\"listeners\":{}}",
       "uiStateJSON": "{}",
       "description": "",
       "version": 1,
@@ -791,62 +496,6 @@
     }
   },
   {
-    "_id": "7a236f30-ccbc-11e7-91de-53bce0fb3b49",
-    "_type": "visualization",
-    "_source": {
-      "title": "announcement.distance(max)",
-      "visState": "{\"title\":\"announcement.distance(max)\",\"type\":\"histogram\",\"params\":{\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"scale\":\"linear\",\"mode\":\"stacked\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":true,\"yAxis\":{\"min\":1,\"max\":2048}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"announcement.distance\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"ts\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}}],\"listeners\":{}}",
-      "uiStateJSON": "{}",
-      "description": "",
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"logstash-*\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
-      }
-    }
-  },
-  {
-    "_id": "705a5c20-cd2a-11e7-8e6b-9f88aebacb6c",
-    "_type": "visualization",
-    "_source": {
-      "title": "block.write.status",
-      "visState": "{\"title\":\"block.write.status\",\"type\":\"histogram\",\"params\":{\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"scale\":\"linear\",\"mode\":\"stacked\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"write.status.keyword\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"ts\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"write.status.keyword\",\"size\":3,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}",
-      "uiStateJSON": "{}",
-      "description": "",
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"logstash-*\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
-      }
-    }
-  },
-  {
-    "_id": "82512580-ccc1-11e7-91de-53bce0fb3b49",
-    "_type": "visualization",
-    "_source": {
-      "title": "block_time/block_received_at(elapsed)",
-      "visState": "{\"title\":\"block_time/block_received_at(elapsed)\",\"type\":\"histogram\",\"params\":{\"addLegend\":true,\"addTimeMarker\":false,\"addTooltip\":true,\"defaultYExtents\":false,\"legendPosition\":\"right\",\"mode\":\"stacked\",\"scale\":\"linear\",\"setYExtents\":true,\"times\":[],\"yAxis\":{\"min\":1,\"max\":300}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"block.time_vs_received_elapsed\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"ts\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}}],\"listeners\":{}}",
-      "uiStateJSON": "{}",
-      "description": "",
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"logstash-*\",\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}},\"filter\":[]}"
-      }
-    }
-  },
-  {
-    "_id": "99453a90-cb51-11e7-8afb-df93034071b4",
-    "_type": "visualization",
-    "_source": {
-      "title": "block.size+block.txcount",
-      "visState": "{\"title\":\"block.size+block.txcount\",\"type\":\"histogram\",\"params\":{\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"scale\":\"square root\",\"mode\":\"grouped\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"block.size\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"ts\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}},{\"id\":\"4\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"blocks.transactions_count\"}}],\"listeners\":{}}",
-      "uiStateJSON": "{}",
-      "description": "",
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"logstash-*\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
-      }
-    }
-  },
-  {
     "_id": "598002b0-cbff-11e7-b18b-cd2ae8165be1",
     "_type": "visualization",
     "_source": {
@@ -903,11 +552,53 @@
     }
   },
   {
-    "_id": "d70566e0-cba4-11e7-b25f-6b2fc206724d",
+    "_id": "ae4ff7e0-cd9f-11e7-820a-a3e7b4e80b74",
     "_type": "visualization",
     "_source": {
-      "title": "block.difficulty",
-      "visState": "{\"title\":\"block.difficulty\",\"type\":\"line\",\"params\":{\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"showCircles\":true,\"interpolate\":\"linear\",\"scale\":\"linear\",\"drawLinesBetweenPoints\":false,\"radiusRatio\":9,\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":true,\"setYExtents\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"block.difficulty\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"block.TimeFromUnix\",\"interval\":\"s\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}}],\"listeners\":{}}",
+      "title": "unique.commit.error.Exp-heatmap",
+      "visState": "{\"title\":\"unique.commit.error.Exp-heatmap\",\"type\":\"heatmap\",\"params\":{\"addTooltip\":true,\"addLegend\":true,\"enableHover\":false,\"legendPosition\":\"right\",\"times\":[],\"colorsNumber\":4,\"colorSchema\":\"Greens\",\"setColorRange\":false,\"colorsRange\":[],\"invertColors\":false,\"percentageMode\":false,\"valueAxes\":[{\"show\":false,\"id\":\"ValueAxis-1\",\"type\":\"value\",\"scale\":{\"type\":\"linear\",\"defaultYExtents\":false},\"labels\":{\"show\":false,\"rotate\":0,\"color\":\"#555\"}}]},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"commit.error.Exp\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"ts\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}}],\"listeners\":{}}",
+      "uiStateJSON": "{\"vis\":{\"defaultColors\":{\"0 - 23\":\"rgb(247,252,245)\",\"23 - 45\":\"rgb(199,233,192)\",\"45 - 68\":\"rgb(116,196,118)\",\"68 - 90\":\"rgb(35,139,69)\"}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "cc0cfea0-cd9e-11e7-820a-a3e7b4e80b74",
+    "_type": "visualization",
+    "_source": {
+      "title": "insert.time(max) - heatmap",
+      "visState": "{\"title\":\"insert.time(max) - heatmap\",\"type\":\"heatmap\",\"params\":{\"addTooltip\":true,\"addLegend\":true,\"enableHover\":false,\"legendPosition\":\"right\",\"times\":[],\"colorsNumber\":4,\"colorSchema\":\"Greens\",\"setColorRange\":false,\"colorsRange\":[],\"invertColors\":false,\"percentageMode\":false,\"valueAxes\":[{\"show\":false,\"id\":\"ValueAxis-1\",\"type\":\"value\",\"scale\":{\"type\":\"linear\",\"defaultYExtents\":false},\"labels\":{\"show\":false,\"rotate\":0,\"color\":\"#555\"}}]},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"insert.time\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"ts\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}}],\"listeners\":{}}",
+      "uiStateJSON": "{\"vis\":{\"defaultColors\":{\"0 - 16250000000\":\"rgb(247,252,245)\",\"16250000000 - 32500000000\":\"rgb(199,233,192)\",\"32500000000 - 48750000000\":\"rgb(116,196,118)\",\"48750000000 - 65000000000\":\"rgb(35,139,69)\"}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "705a5c20-cd2a-11e7-8e6b-9f88aebacb6c",
+    "_type": "visualization",
+    "_source": {
+      "title": "block.write.status",
+      "visState": "{\"title\":\"block.write.status\",\"type\":\"histogram\",\"params\":{\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"scale\":\"linear\",\"mode\":\"stacked\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"ts\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"write.status.keyword\",\"size\":3,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "5e8ef970-cd9c-11e7-820a-a3e7b4e80b74",
+    "_type": "visualization",
+    "_source": {
+      "title": "peer.remove.reason",
+      "visState": "{\"title\":\"peer.remove.reason\",\"type\":\"histogram\",\"params\":{\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"scale\":\"linear\",\"mode\":\"stacked\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"ts\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"remove.reason.keyword\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}",
       "uiStateJSON": "{}",
       "description": "",
       "version": 1,
@@ -922,6 +613,132 @@
     "_source": {
       "title": "block.number(max)",
       "visState": "{\"title\":\"block.number(max)\",\"type\":\"line\",\"params\":{\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"showCircles\":true,\"interpolate\":\"step-after\",\"scale\":\"linear\",\"drawLinesBetweenPoints\":false,\"radiusRatio\":9,\"times\":[],\"addTimeMarker\":true,\"defaultYExtents\":true,\"setYExtents\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"block.number\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"ts\",\"interval\":\"m\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "d70566e0-cba4-11e7-b25f-6b2fc206724d",
+    "_type": "visualization",
+    "_source": {
+      "title": "block.difficulty",
+      "visState": "{\"title\":\"block.difficulty\",\"type\":\"line\",\"params\":{\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"showCircles\":true,\"interpolate\":\"linear\",\"scale\":\"linear\",\"drawLinesBetweenPoints\":false,\"radiusRatio\":9,\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":true,\"setYExtents\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"block.difficulty\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"block.TimeFromUnix\",\"interval\":\"s\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "82512580-ccc1-11e7-91de-53bce0fb3b49",
+    "_type": "visualization",
+    "_source": {
+      "title": "block_time/block_received_at(elapsed)",
+      "visState": "{\"title\":\"block_time/block_received_at(elapsed)\",\"type\":\"histogram\",\"params\":{\"addLegend\":true,\"addTimeMarker\":false,\"addTooltip\":true,\"defaultYExtents\":false,\"legendPosition\":\"right\",\"mode\":\"stacked\",\"scale\":\"linear\",\"setYExtents\":true,\"times\":[],\"yAxis\":{\"min\":-100,\"max\":100}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"block.time_vs_received_elapsed\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"ts\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "7a236f30-ccbc-11e7-91de-53bce0fb3b49",
+    "_type": "visualization",
+    "_source": {
+      "title": "discarded.announcement.distance(max)",
+      "visState": "{\"title\":\"discarded.announcement.distance(max)\",\"type\":\"histogram\",\"params\":{\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"scale\":\"linear\",\"mode\":\"stacked\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":true,\"yAxis\":{\"min\":1,\"max\":2048}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"announcement.distance\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"ts\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "99453a90-cb51-11e7-8afb-df93034071b4",
+    "_type": "visualization",
+    "_source": {
+      "title": "block.txcount",
+      "visState": "{\"title\":\"block.txcount\",\"type\":\"histogram\",\"params\":{\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"scale\":\"linear\",\"mode\":\"grouped\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false},\"aggs\":[{\"id\":\"2\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"block.TimeFromUnix\",\"interval\":\"custom\",\"customInterval\":\"30m\",\"min_doc_count\":1,\"extended_bounds\":{}}},{\"id\":\"4\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"block.transactions_count\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "75428e80-cdaa-11e7-b156-cff809f8a703",
+    "_type": "visualization",
+    "_source": {
+      "title": "peer.remote_version-donut-lim:1000",
+      "visState": "{\"title\":\"peer.remote_version-donut-lim:1000\",\"type\":\"pie\",\"params\":{\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":true},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"peer.remote_version.keyword\",\"size\":100,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "4a3dd710-cb6d-11e7-90fb-2dc563d1a10a",
+    "_type": "visualization",
+    "_source": {
+      "title": "server.peercount(average)",
+      "visState": "{\"title\":\"server.peercount(average)\",\"type\":\"metric\",\"params\":{\"handleNoResults\":true,\"fontSize\":\"18\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"server.peer_count\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "0e65f3f0-cda5-11e7-820a-a3e7b4e80b74",
+    "_type": "visualization",
+    "_source": {
+      "title": "block.tx_count(avg)",
+      "visState": "{\"title\":\"block.tx_count(avg)\",\"type\":\"metric\",\"params\":{\"handleNoResults\":true,\"fontSize\":\"18\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"block.transactions_count\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "9244f3a0-cb3f-11e7-9d85-d340cd698212",
+    "_type": "visualization",
+    "_source": {
+      "title": "maxblocknumber",
+      "visState": "{\"title\":\"maxblocknumber\",\"type\":\"metric\",\"params\":{\"handleNoResults\":true,\"fontSize\":\"18\"},\"aggs\":[{\"id\":\"2\",\"enabled\":true,\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"block.number\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "65ed31b0-cba7-11e7-9506-83f80dc472f7",
+    "_type": "visualization",
+    "_source": {
+      "title": "block.uncles",
+      "visState": "{\"title\":\"block.uncles\",\"type\":\"metric\",\"params\":{\"handleNoResults\":true,\"fontSize\":\"18\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"block.uncles\"}}],\"listeners\":{}}",
       "uiStateJSON": "{}",
       "description": "",
       "version": 1,
