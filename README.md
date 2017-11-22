@@ -1,5 +1,7 @@
 ## Overview
 
+![dash-example](screenshots/dash-overview.png)
+
 ## Instructions
 
 Install `filebeat`, `logstash`, `elasticsearch`, and `kibana`.
@@ -63,6 +65,8 @@ elasticsearch
 #### Kibana
 Turn kibana on.
 
+You may need to use Kibana's `Management`->`Index Patterns` to create an index for `logstash-*`.
+
 Kibana connects with Elasticsearch on `9200`, and publishes on `5601`.
 > Terminal 5
 ```
@@ -72,5 +76,4 @@ kibana
 
 Now you can open `localhost:5601` in the browser and find kibana.
 
-You may need to use Kibana's `Management`->`Index Patterns` to create indexes for `logstash-*`.
 
