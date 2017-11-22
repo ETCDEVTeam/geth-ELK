@@ -1,6 +1,7 @@
 ## Overview
 
-![dash-example](screenshots/dash-overview.png)
+![dash-example](screenshots/dash-overview1.png)
+![dash-example](screenshots/dash-overview2.png)
 
 ## Instructions
 
