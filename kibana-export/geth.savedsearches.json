@@ -1,65 +1,5 @@
 [
   {
-    "_id": "ef20b5d0-7d30-11e7-a892-1946b531439b",
-    "_type": "search",
-    "_source": {
-      "title": "SERVER ADD PEER",
-      "description": "",
-      "hits": 0,
-      "columns": [
-        "verb"
-      ],
-      "sort": [
-        "@timestamp",
-        "desc"
-      ],
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"logstash-*\",\"filter\":[{\"meta\":{\"negate\":false,\"index\":\"logstash-*\",\"key\":\"verb\",\"value\":\"ADD\",\"disabled\":false,\"alias\":null},\"query\":{\"match\":{\"verb\":{\"query\":\"ADD\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}},{\"meta\":{\"negate\":false,\"index\":\"logstash-*\",\"key\":\"subject\",\"value\":\"PEER\",\"disabled\":false,\"alias\":null},\"query\":{\"match\":{\"subject\":{\"query\":\"PEER\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}},{\"meta\":{\"negate\":false,\"index\":\"logstash-*\",\"key\":\"receiver\",\"value\":\"SERVER\",\"disabled\":false,\"alias\":null},\"query\":{\"match\":{\"receiver\":{\"query\":\"SERVER\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647}}"
-      }
-    }
-  },
-  {
-    "_id": "a44ba5a0-7d31-11e7-a892-1946b531439b",
-    "_type": "search",
-    "_source": {
-      "title": "WRITE BLOCK",
-      "description": "",
-      "hits": 0,
-      "columns": [
-        "verb"
-      ],
-      "sort": [
-        "@timestamp",
-        "desc"
-      ],
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"logstash-*\",\"filter\":[{\"meta\":{\"negate\":false,\"index\":\"logstash-*\",\"key\":\"subject\",\"value\":\"BLOCK\",\"disabled\":false,\"alias\":null},\"query\":{\"match\":{\"subject\":{\"query\":\"BLOCK\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}},{\"meta\":{\"negate\":false,\"index\":\"logstash-*\",\"key\":\"verb\",\"value\":\"WRITE\",\"disabled\":false,\"alias\":null},\"query\":{\"match\":{\"verb\":{\"query\":\"WRITE\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647}}"
-      }
-    }
-  },
-  {
-    "_id": "3f752330-7d4b-11e7-8eb5-09ac1751a044",
-    "_type": "search",
-    "_source": {
-      "title": "SERVER.PEER_COUNT",
-      "description": "",
-      "hits": 0,
-      "columns": [
-        "SERVER.PEER_COUNT"
-      ],
-      "sort": [
-        "@timestamp",
-        "desc"
-      ],
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"logstash-*\",\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647},\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}}}"
-      }
-    }
-  },
-  {
     "_id": "09bdc990-7dcd-11e7-a384-fd325ddfb065",
     "_type": "search",
     "_source": {
@@ -136,6 +76,46 @@
       "version": 1,
       "kibanaSavedObjectMeta": {
         "searchSourceJSON": "{\"index\":\"logstash-*\",\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}},\"filter\":[{\"$state\":{\"store\":\"appState\"},\"exists\":{\"field\":\"event\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"logstash-*\",\"key\":\"exists\",\"negate\":false,\"value\":\"event\"}}],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647}}"
+      }
+    }
+  },
+  {
+    "_id": "d0af7a10-d00e-11e7-8147-a11cbd784dca",
+    "_type": "search",
+    "_source": {
+      "title": "event:blockchain.reorg.blocks",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "_source"
+      ],
+      "sort": [
+        "ts",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647},\"query\":{\"query_string\":{\"query\":\"event:blockchain.reorg.blocks\",\"analyze_wildcard\":true}}}"
+      }
+    }
+  },
+  {
+    "_id": "ffe13bc0-d00e-11e7-8147-a11cbd784dca",
+    "_type": "search",
+    "_source": {
+      "title": "event:blockchain.reorg.blocks",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "event"
+      ],
+      "sort": [
+        "ts",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647},\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"event:blockchain.reorg.blocks\"}}}"
       }
     }
   }
