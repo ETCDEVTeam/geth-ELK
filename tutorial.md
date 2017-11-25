@@ -1,15 +1,25 @@
-# Understanding geth with log analysis
+# Log analysis and monitoring with geth + elastic
 
-> Please note that this document and the geth APIs referenced herein are still (as of 22 Nov 2017) in an experimental stage and should not be relied on for production purposes.
+> Please note that this document that the geth `mlog` APIs referenced herein are still (as of 24 Nov 2017) in an experimental stage and should not be relied on for production purposes.
 
-This is a walkthrough designed to help get you up and running using [Ethereum Classic](https://ethereumclassic.github.io/)'s
-[geth](https://github.com/ethereumproject/go-ethereum) with the venerated [ Elasticsearch-Logstash-Kibana (_ELK_)](https://www.elastic.co/products) stack.
+- [Ethereum Classic](https://ethereumclassic.github.io/)
 
-Below is an example of one of my geth dashboards built with the ELK tools. You can build one like this or branch out and design it however you want. The cool thing is that once you get a hang of building visualizations, you'll be able to chase down your own unique ideas and questions about the client and network.
+"Normally" running [geth classic](https://github.com/ethereumproject/go-ethereum) as a node in the  network you'll see something like this:
 
-There are, I'm sure, tons of tutorials out there on learning to work with Elasticsearch and build visualizations with Kibana, and I'm _very far_ from being an expert on the subject. So I'm going to focus more on describing and (hopefully) troubleshooting the geth and initial set up parts.
+```
+$ geth --vmodule="eth/fetcher/*=6,eth/downloader/*=6,eth/peer.go=6,eth/handler.go=5,core/database_util.go=6,core/blockchain.go=6" --log-dir="mainnet/log" --log-status="sync=10" --rpc --ws
+```
 
-![big-picture](./tutorial-images/overview.png)
+![geth-logs](./tutorial-images/geth_console_log.png)
+
+These are logs whose style and intent trace back to, well, _traces_, debugging, developer feedback, and event updates. With a few exceptions, they are written by developers for developers.
+
+
+
+![dash-sync](./tutorial-images/dash_sync.png)
+
+
+- [(Filebeat)-Elasticsearch-Logstash-Kibana (_ELK_)](https://www.elastic.co/products)
 
 ### Big picture
 
