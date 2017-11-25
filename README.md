@@ -1,4 +1,4 @@
-# MLog Blog
+# Geth + Elasticsearch
 
 > Please note that this document that the geth `mlog` APIs referenced herein are still (as of 24 Nov 2017) in an experimental stage and should not be relied on for production purposes.
 
