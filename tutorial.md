@@ -144,5 +144,109 @@ Filebeat is now publishing your logs on port `5043`.
 
 ##### Terminal 3
 
+Turn Logstash on:
+```
+$ logstash -f ls-pipeline-json.conf --config.reload.automatic
+```
+
+> Logstash config: [./ls-pipeline-json.conf](./ls-pipeline-json.conf)
+```
+input {
+    beats {
+        port => "5043"
+    }
+}
+filter {
+    grok {
+      match => { "to.udp_address" => "%{IP:to.host}:%{NUMBER:port}" }
+      match => { "from.udp_address" => "%{IP:from.host}:%{NUMBER:port}" }
+    }
+    date {
+        match => [ "block.time","UNIX" ]
+        target => "block.TimeFromUnix"
+    }
+    geoip {
+        source => "to.host"
+        target => "geoip"
+        add_field => [ "[geoip][coordinates]", "%{[geoip][longitude]}" ]
+        add_field => [ "[geoip][coordinates]", "%{[geoip][latitude]}" ]
+    }
+    geoip {
+        source => "from.host"
+        target => "geoip"
+        add_field => [ "[geoip][coordinates]", "%{[geoip][longitude]}" ]
+        add_field => [ "[geoip][coordinates]", "%{[geoip][latitude]}" ]
+    }
+    mutate {
+        convert => [ "[geoip][coordinates]", "float" ]
+    }
+    ruby {
+        code => "
+            begin
+                block_time = DateTime.parse(Time.at(event.get('block.time')).to_s).to_time
+                block_received_at = DateTime.parse(event.get('block.received_at')).to_time
+
+                event.set('block.time_vs_received_elapsed', block_received_at - block_time)
+            rescue Exception => e
+                event.set('logstash_ruby_exception', 'elapsed: ' + e.message)
+            end
+        "
+    }
+}
+output {
+    stdout { }
+    elasticsearch {
+        hosts => "localhost:9200"
+    }
+}
+```
+
+There are a couple of filters going on here:
+
+- the `grok` filters are helping `geoip` parse the IP's so we can make the fancy where-in-the-world map
+- the `date` filter is using the Unix default to establish block.time as a `time` intead of just a bunch of seconds
+- in the `ruby` filter we're actually _creating a new_ field by subtracting `block.received_at` from `block.time` fields to create `block.time_vs_received_elapsed` which is an interesting network latency/propagation measure
+
+These filters are the tip of the iceberg, too. You can use other cool elastic packages like `aggregate` and a bunch more I don't know off the top of my head to clean, manipulate, and measure your raw log data before passing it to elasticsearch.
+
+Logstash is now grabbing your logs from Filebeat on `5043`, load-extract-transforming them, and making them available for Elasticsearch on `9200`.
+
+
+### Elasticsearch and Kibana
+
+##### Terminal 4
+
+Turn elastic search on.
+```
+$ elasticsearch
+```
+
+##### Terminal 5
+
+Turn Kibana on.
+```
+$ kibana
+```
+
+Kibana connects with Elasticsearch on `9200`, and publishes on `5601`. __Finally, open `localhost:5601` in your browser__ of choice.
+
+> :information_source: Elasticsearch will only be able to create indexes for events and fields it has ingested.
+
+This means that if you're just starting out and don't have tons of mlogs (yet!), then you won't be able to index or visualize using those as-yet-unseen values. For example, if you just fired everything up but geth hasn't seen a chain reorg yet, you won't be able to index on `blockchain.reorg.blocks` or use that value in a visualization.
+
+As you accrue mlogs and ingest them in elasticsearch, you may find it useful to refresh your field list:
+
+![kibana-refresh-indexes](./tutorial-images/kibana_refresh_index.png)
+
+----
+
+### Hit the ground running
+
+If you'd like to import the indexes, dashboards, and visualizations used to make the dashboards shown above, they're all available here in [./kibana-export](./kibana-export).
+
+
+![kibana_import](./tutorial-images/kibana_import.png)
+
+
 
 
