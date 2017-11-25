@@ -1,10 +1,11 @@
-# Log analysis and monitoring with geth + elastic
+# MLog Blog
 
 > Please note that this document that the geth `mlog` APIs referenced herein are still (as of 24 Nov 2017) in an experimental stage and should not be relied on for production purposes.
 
 - [Ethereum Classic](https://ethereumclassic.github.io/)
+- Elastic's [(Filebeat)-Elasticsearch-Logstash-Kibana (_ELK_)](https://www.elastic.co/products)
 
-"Normally" running [geth classic](https://github.com/ethereumproject/go-ethereum) as a node in the  network you'll see something like this:
+If you're running [Geth classic](https://github.com/ethereumproject/go-ethereum) you're likely to see some console logs something like this:
 
 ```
 $ geth --vmodule="eth/fetcher/*=6,eth/downloader/*=6,eth/peer.go=6,eth/handler.go=5,core/database_util.go=6,core/blockchain.go=6" --log-dir="mainnet/log" --log-status="sync=10" --rpc --ws
@@ -12,19 +13,52 @@ $ geth --vmodule="eth/fetcher/*=6,eth/downloader/*=6,eth/peer.go=6,eth/handler.g
 
 ![geth-logs](./tutorial-images/geth_console_log.png)
 
-These are logs whose style and intent trace back to, well, _traces_, debugging, developer feedback, and event updates. With a few exceptions, they are written by developers for developers.
+These are logs whose style and intent trace back to, well, _traces_, debugging, developer feedback, and event updates. While useful for developers to track and understand program decision making on a micro level, when _you_ see thousands of lines like these flying across your screen, it can be not a little tricky to make sense of the "big picture" and general performance of your node.
+
+One option for a simpler and more easily grokable output would be to use a few flags. Here we can enable sync status logs to print every 20 seconds, and turn down normal event reporting to just show errors (`1`).
+
+```
+$ geth --log-status="sync=20" --verbosity 1
+```
+![geth-logs-status](./tutorial-images/geth_console_log_status.png)
 
 
+While in some cases this might fit the bill, it also has it's own shortcomings: hard to debug, single-dimensioned, exclusively macro-level, and any performance analysis will require a calculator.
 
+This is where geth's [mlog API](https://github.com/ethereumproject/go-ethereum/wiki/mlog-API) comes in. `MLog` stands for "machine log," and it's job is to make logs that computers can read and readily analyse. Sometimes these are also called _structured logs_.
+
+Once you tell geth to start churning out mlogs, you can then fire them over to the Elastic stack, and open the door to something like this:
+
+#### Blockchain & Sync:
 ![dash-sync](./tutorial-images/dash_sync.png)
 
+#### Network & Peers:
+![dash-p2p](./tutorial-images/dash_p2p.png)
 
-- [(Filebeat)-Elasticsearch-Logstash-Kibana (_ELK_)](https://www.elastic.co/products)
+#### Miners & Mining:
+![dash-mining](./tutorial-images/dash_mining.png)
+
+----
+
+Mlog has 3 output modes (or _structures_): `plain`, `kv (key-value)`, and `json`.
+
+Example `kv` line:
+```
+2017-08-24T17:17:39Z [discover] PING HANDLE FROM from.udp_address=$STRING from.id=$STRING ping.bytes_transferred=$INT
+```
+
+
+Example `json` line:
+```
+{"event":"ping.handle.from","from.id":"string","from.udp_address":"string","ping.bytes_transferred":0,"ts":"2017-10-18T09:01:06.54592753-07:00"}
+```
+
+In this walkthrough I'm going to be using the `json` mode because I've found that it saves a lot of time in configuring some of the ELK line parsers (_eg_ `grok`), indexes, and stuff.
+
+
+
 
 ### Big picture
-
-"Extract, Transform, Load" (_ETL_) is a phrase that gets thrown around. It means "organize some crazy shit to make it sensible, and so you can actually do stuff with it." The crazy shit we're going
-to sensify comes from geth via the `mlog` feature. Geth's `mlog` stands for "machine logging" and it's a log system that's intended to produce logs that ETL systems can wrap their tiny little machine brains around.
 
 Once we get geth's `mlog`s up and running, we're going to point __Filebeat__ at them to watch, read, and send off to __Logstash__. Once Logstash hears about some incoming logs from Filebeat, Logstash will parse and transform those raw logs into a structured data format for __Elasticsearch__. Elasticsearch then does a bunch of indexing and stuff and fires up a port to be able to talk to __Kibana__ about that data. Kibana is the application that provides a nice UI to interact with Elasticsearch data; build visualizations, make searches and filters... etc.
 
