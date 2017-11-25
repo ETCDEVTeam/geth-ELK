@@ -1,0 +1,27 @@
+[
+  {
+    "_id": "345002a0-cd86-11e7-b1d1-d72fcd73a57d",
+    "_type": "dashboard",
+    "_source": {
+      "title": "geth-client/blockchain-sync",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"col\":1,\"id\":\"99453a90-cb51-11e7-8afb-df93034071b4\",\"panelIndex\":14,\"row\":21,\"size_x\":12,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"73cf3220-cb6a-11e7-94f6-478d62c5fa59\",\"panelIndex\":17,\"row\":7,\"size_x\":12,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"69805210-cb7c-11e7-90fb-2dc563d1a10a\",\"panelIndex\":21,\"row\":27,\"size_x\":12,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"d70566e0-cba4-11e7-b25f-6b2fc206724d\",\"panelIndex\":27,\"row\":14,\"size_x\":12,\"size_y\":2,\"type\":\"visualization\"},{\"col\":5,\"id\":\"65ed31b0-cba7-11e7-9506-83f80dc472f7\",\"panelIndex\":28,\"row\":1,\"size_x\":2,\"size_y\":1,\"type\":\"visualization\"},{\"col\":1,\"id\":\"ea6e4fb0-cbb0-11e7-9506-83f80dc472f7\",\"panelIndex\":29,\"row\":23,\"size_x\":12,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"a81381d0-cbfb-11e7-b18b-cd2ae8165be1\",\"panelIndex\":31,\"row\":2,\"size_x\":12,\"size_y\":5,\"type\":\"visualization\"},{\"col\":1,\"id\":\"7a236f30-ccbc-11e7-91de-53bce0fb3b49\",\"panelIndex\":38,\"row\":29,\"size_x\":12,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"9244f3a0-cb3f-11e7-9d85-d340cd698212\",\"panelIndex\":43,\"row\":1,\"size_x\":2,\"size_y\":1,\"type\":\"visualization\"},{\"col\":3,\"id\":\"0e65f3f0-cda5-11e7-820a-a3e7b4e80b74\",\"panelIndex\":44,\"row\":1,\"size_x\":2,\"size_y\":1,\"type\":\"visualization\"},{\"col\":1,\"id\":\"1747d580-d00f-11e7-8147-a11cbd784dca\",\"panelIndex\":46,\"row\":25,\"size_x\":12,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"c2910750-d013-11e7-8147-a11cbd784dca\",\"panelIndex\":47,\"row\":9,\"size_x\":12,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"c42371b0-d014-11e7-8147-a11cbd784dca\",\"panelIndex\":48,\"row\":12,\"size_x\":12,\"size_y\":2,\"type\":\"visualization\"},{\"col\":7,\"id\":\"9af1a550-d023-11e7-8147-a11cbd784dca\",\"panelIndex\":49,\"row\":1,\"size_x\":2,\"size_y\":1,\"type\":\"visualization\"},{\"col\":1,\"id\":\"dd80e580-d02c-11e7-8147-a11cbd784dca\",\"panelIndex\":50,\"row\":16,\"size_x\":12,\"size_y\":3,\"type\":\"visualization\"},{\"col\":9,\"id\":\"8206d2c0-d0b6-11e7-ba78-8b56809a1524\",\"panelIndex\":51,\"row\":1,\"size_x\":2,\"size_y\":1,\"type\":\"visualization\"},{\"col\":11,\"id\":\"68b09370-d0b5-11e7-ba78-8b56809a1524\",\"panelIndex\":52,\"row\":1,\"size_x\":2,\"size_y\":1,\"type\":\"visualization\"},{\"size_x\":12,\"size_y\":2,\"panelIndex\":53,\"type\":\"visualization\",\"id\":\"23f2bf60-d0ec-11e7-b8b5-53de9373b904\",\"col\":1,\"row\":19}]",
+      "optionsJSON": "{\"darkTheme\":true}",
+      "uiStateJSON": "{\"P-14\":{\"vis\":{\"legendOpen\":false}},\"P-17\":{\"vis\":{\"legendOpen\":false}},\"P-21\":{\"vis\":{\"legendOpen\":false}},\"P-27\":{\"vis\":{\"legendOpen\":false}},\"P-29\":{\"vis\":{\"legendOpen\":false}},\"P-31\":{\"vis\":{\"legendOpen\":false}},\"P-38\":{\"vis\":{\"legendOpen\":false}},\"P-39\":{\"vis\":{\"legendOpen\":false}},\"P-46\":{\"vis\":{\"legendOpen\":false}},\"P-47\":{\"vis\":{\"legendOpen\":false}},\"P-48\":{\"vis\":{\"defaultColors\":{\"0 - 160\":\"rgb(255,255,204)\",\"160 - 320\":\"rgb(255,241,170)\",\"320 - 480\":\"rgb(254,225,135)\",\"480 - 640\":\"rgb(254,201,101)\",\"640 - 800\":\"rgb(254,171,73)\",\"800 - 960\":\"rgb(253,141,60)\",\"960 - 1120\":\"rgb(252,91,46)\",\"1120 - 1280\":\"rgb(237,47,34)\",\"1280 - 1440\":\"rgb(212,16,32)\",\"1440 - 1600\":\"rgb(176,0,38)\"},\"legendOpen\":false}},\"P-50\":{\"vis\":{\"legendOpen\":false}},\"P-53\":{\"vis\":{\"legendOpen\":false}}}",
+      "version": 1,
+      "timeRestore": true,
+      "timeTo": "now",
+      "timeFrom": "now-8h",
+      "refreshInterval": {
+        "display": "30 minutes",
+        "pause": false,
+        "section": 2,
+        "value": 1800000
+      },
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}}}]}"
+      }
+    }
+  }
+]
