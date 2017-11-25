@@ -40,6 +40,36 @@ Once you tell geth to start churning out mlogs, you can then fire them over to t
 
 ----
 
+### Big picture
+
+Once we get geth's `mlog`s up and running, we're going to point __Filebeat__ at them to watch, read, and send off to __Logstash__. Once Logstash hears about some incoming logs from Filebeat, Logstash will parse and transform those raw logs into a structured data format for __Elasticsearch__. Elasticsearch then does a bunch of indexing and stuff and fires up a port to be able to talk to __Kibana__ about that data. Kibana is the application that provides a nice UI to interact with Elasticsearch data; build visualizations, make searches and filters... etc.
+
+It's kind of a long ass pipeline, but the team at Elastic have done a great job of making modular software that, while it seems kind of long and complicated, offers a lot of flexibility because of the modularity; you can run Filebeat on one server next to your geth, then pipe those logs along to Logstash and Elasticsearch on another server (or two); separate your concerns, user privileges, and public APIs. Weird but great.
+
+> :information_source: We're going to run __each of these tools__ in their own terminal console. You're going to have 5 terminals open by the end of this. There are probably ways to use services, screens, backgrounding, etc. to keep your tab count smaller, but that's for another time.
+
+### Install all the things
+
+OSX:
+```
+$ brew install ethereumproject/classic/geth
+$ brew install filebeat logstash elasticsearch kibana
+```
+
+If you're on Linux or Windows, you're on your own for the (F)ELK stack for now. You can install geth
+by checking out our [Releases Page](https://github.com/ethereumproject/go-ethereum/releases) and just downloading the (archived) binary, un-archiving the executable, and moving it to your `$PATH`.
+
+
+### Geth
+
+##### Terminal 1
+
+So far for geth `mlog` is disabled by default; you'll need to turn it on as you fire up your geth instance.
+
+```
+$ geth --mlog=json
+```
+
 Mlog has 3 output modes (or _structures_): `plain`, `kv (key-value)`, and `json`.
 
 Example `kv` line:
@@ -53,54 +83,27 @@ Example `json` line:
 {"event":"ping.handle.from","from.id":"string","from.udp_address":"string","ping.bytes_transferred":0,"ts":"2017-10-18T09:01:06.54592753-07:00"}
 ```
 
-In this walkthrough I'm going to be using the `json` mode because I've found that it saves a lot of time in configuring some of the ELK line parsers (_eg_ `grok`), indexes, and stuff.
-
-
-
-
-### Big picture
-
-Once we get geth's `mlog`s up and running, we're going to point __Filebeat__ at them to watch, read, and send off to __Logstash__. Once Logstash hears about some incoming logs from Filebeat, Logstash will parse and transform those raw logs into a structured data format for __Elasticsearch__. Elasticsearch then does a bunch of indexing and stuff and fires up a port to be able to talk to __Kibana__ about that data. Kibana is the application that provides a nice UI to interact with Elasticsearch data; build visualizations, make searches and filters... etc.
-
-It's kind of a long ass pipeline, but the team at Elastic have done a great job of making modular software that, while it seems kind of long and complicated, offers a lot of flexibility because of the modularity; you can run Filebeat on one server next to your geth, then pipe those logs along to Logstash and Elasticsearch on another server (or two); separate your concerns, user privileges, and public APIs. Weird but great.
-
-Be advised: we're going to run __each of these tools__ in their own terminal console. You're going to have 5 terminals open by the end of this. There are probably ways to use services, screens, backgrounding, etc. to keep your tab count smaller, but that's for another time.
-
-### Install all the things
-
-OSX:
-```
-$ brew install ethereumproject/classic/geth
-$ brew install filebeat logstash elasticsearch kibana
-```
-
-If you're on Linux or Windows, you're on your own for the (F)ELK stack. You can install geth
-by checking out our [Releases Page](https://github.com/ethereumproject/go-ethereum/releases) and just downloading the (archived) binary, un-archiving the executable, and moving it to your `$PATH`.
-
-
-### Get geth going
-
-##### Terminal 1
-
-So far for geth `mlog` is disabled by default; you'll need to turn it on as you fire up your geth instance.
-
-```
-$ geth --mlog=json
-```
-
 In this walkthrough I'm only going to use the `json` format for mlogs. You can also use
 `kv`, or `plain`. I like JSON because Logstash likes JSON, so it saves a lot of [`grok`ing](https://www.elastic.co/guide/en/logstash/current/plugins-filters-grok.html).
 
-You can also use `--mlog-dir=place/for/mlogs [default: <datadir>/<chaindir>/mlogs]` to pick where you want to keep these logs. Be advised that these logs aren't tiny. Geth will generate about 200MB of machine logs every 12 hours. If you're only interested in mlogs for certain components, you can also use the `--mlog-components` flag. As usual, check out `geth help` for a little more information there.
+You can also use `--mlog-dir` to pick where you want to keep these logs.
+
+> :information_source: Be advised that these logs aren't tiny. Geth will generate about 200MB of machine logs every 12 hours. If you're only interested in mlogs for certain components, you can also use the `--mlog-components` flag. As usual, check out `geth help` for a little more information there.
 
 #####  You get out what you put in.
 Elasticsearch is going to ingest and store the data it gets from geth. This means that Elasticsearch
 _will only have_ the data that you mlog from geth until you run it with mlog tomorrow... and so on. If you've only used `--mlog` with geth today, that's all the data Elasticsearch is going to get. It won't automatically have lifetime of data for your geth client or somehow magically know about the whole blockchain.
 
 
-### Filebeat, Logstash, Elasticsearch
+### Filebeat
 
 ##### Terminal 2
+
+Turn Filebeat on:
+
+```
+$ filebeat -e -c $(pwd|echo path/to/this/dir)/filebeat.geth.mlog.json.yml -d "publish"
+```
 
 > Filebeat config: [./filebeat.geth.mlog.json.yml](./filebeat.geth.mlog.json.yml)
 ```
@@ -115,7 +118,9 @@ output.logstash:
   hosts: ["localhost:5043"]
 ```
 
-Note that we're using wildcard globbing to read all `mlog*` files. Geth will create a new mlog file each time it fires up, and automatically roll the log file when it reaches a max size. Your `mlogs/` may well end up looking like
+You want to use _this_ config file. Filebeat's default config dir is `/usr/local/etc/filebeat` and it comes with a default config file, so you can either toss this config in there or point to it.
+
+Note that we're using __wildcard globbing__ to watch all `mlog*` files. This is convenient because geth will create a new mlog file each time it fires up, and automatically roll the log file when it reaches a max size. If you use mlogs consistently, your `mlogs/` directory may end up looking like this:
 
 ```
 -rw-r--r-- 1 ia staff 3.8M Nov 21 11:43 geth.mh.ia.mlog.20171121-114144.51125
@@ -131,20 +136,11 @@ Note that we're using wildcard globbing to read all `mlog*` files. Geth will cre
 -rw-r--r-- 1 ia staff  40M Nov 23 19:27 geth.mh.ia.mlog.20171123-135124.71278
 ```
 
-so it's a nice feature for Filebeat to provide.
 
-Turn Filebeat on:
-
-```
-$ filebeat -e -c $(pwd|echo path/to/this/dir)/filebeat.geth.mlog.json.yml -d "publish"
-```
-
-The point is you want to use _this_ config file. Filebeat's default config dir is /usr/local/etc/filebeat and it comes with a default config file, so you can either toss this config in there or point to it.
-
-Filebeat is publishing your logs on port `5043`.
+Filebeat is now publishing your logs on port `5043`.
 
 
-----
+### Logstash
 
 ##### Terminal 3
 
