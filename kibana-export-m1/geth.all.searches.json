@@ -15,7 +15,7 @@
       ],
       "version": 1,
       "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"logstash-*\",\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}},\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647}}"
+        "searchSourceJSON": "{\"index\":\"m1-*\",\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}},\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647}}"
       }
     }
   },
@@ -35,7 +35,7 @@
       ],
       "version": 1,
       "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"logstash-*\",\"query\":{\"query_string\":{\"query\":\"event:server.remove.peer\",\"analyze_wildcard\":true}},\"filter\":[{\"meta\":{\"negate\":false,\"index\":\"logstash-*\",\"key\":\"event\",\"value\":\"server.remove.peer\",\"disabled\":false,\"alias\":null},\"query\":{\"match\":{\"event\":{\"query\":\"server.remove.peer\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647}}"
+        "searchSourceJSON": "{\"index\":\"m1-*\",\"query\":{\"query_string\":{\"query\":\"event:server.remove.peer\",\"analyze_wildcard\":true}},\"filter\":[{\"meta\":{\"negate\":false,\"index\":\"m1-*\",\"key\":\"event\",\"value\":\"server.remove.peer\",\"disabled\":false,\"alias\":null},\"query\":{\"match\":{\"event\":{\"query\":\"server.remove.peer\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647}}"
       }
     }
   },
@@ -55,7 +55,7 @@
       ],
       "version": 1,
       "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"logstash-*\",\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}},\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647}}"
+        "searchSourceJSON": "{\"index\":\"m1-*\",\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}},\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647}}"
       }
     }
   },
@@ -75,7 +75,7 @@
       ],
       "version": 1,
       "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"logstash-*\",\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}},\"filter\":[{\"$state\":{\"store\":\"appState\"},\"exists\":{\"field\":\"event\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"logstash-*\",\"key\":\"exists\",\"negate\":false,\"value\":\"event\"}}],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647}}"
+        "searchSourceJSON": "{\"index\":\"m1-*\",\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}},\"filter\":[{\"$state\":{\"store\":\"appState\"},\"exists\":{\"field\":\"event\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"m1-*\",\"key\":\"exists\",\"negate\":false,\"value\":\"event\"}}],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647}}"
       }
     }
   },
@@ -95,7 +95,7 @@
       ],
       "version": 1,
       "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"logstash-*\",\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647},\"query\":{\"query_string\":{\"query\":\"event:blockchain.reorg.blocks\",\"analyze_wildcard\":true}}}"
+        "searchSourceJSON": "{\"index\":\"m1-*\",\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647},\"query\":{\"query_string\":{\"query\":\"event:blockchain.reorg.blocks\",\"analyze_wildcard\":true}}}"
       }
     }
   },
@@ -115,7 +115,7 @@
       ],
       "version": 1,
       "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"logstash-*\",\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647},\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"event:blockchain.reorg.blocks\"}}}"
+        "searchSourceJSON": "{\"index\":\"m1-*\",\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647},\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"event:blockchain.reorg.blocks\"}}}"
       }
     }
   },
@@ -135,7 +135,7 @@
       ],
       "version": 1,
       "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"logstash-*\",\"query\":{\"query_string\":{\"query\":\"event:downloader.*register.peer\",\"analyze_wildcard\":true}},\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647}}"
+        "searchSourceJSON": "{\"index\":\"m1-*\",\"query\":{\"query_string\":{\"query\":\"event:downloader.*register.peer\",\"analyze_wildcard\":true}},\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647}}"
       }
     }
   },
@@ -155,7 +155,7 @@
       ],
       "version": 1,
       "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"logstash-*\",\"query\":{\"query_string\":{\"query\":\"peer.remote_version:(geth|parity)\",\"analyze_wildcard\":true}},\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647}}"
+        "searchSourceJSON": "{\"index\":\"m1-*\",\"query\":{\"query_string\":{\"query\":\"peer.remote_version:(geth|parity)\",\"analyze_wildcard\":true}},\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647}}"
       }
     }
   }
