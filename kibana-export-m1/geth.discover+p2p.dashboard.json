@@ -1,0 +1,27 @@
+[
+  {
+    "_id": "05182c00-d02f-11e7-8147-a11cbd784dca",
+    "_type": "dashboard",
+    "_source": {
+      "title": "geth-client/discovery+p2p",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"col\":1,\"id\":\"16f64100-cb57-11e7-8afb-df93034071b4\",\"panelIndex\":15,\"row\":13,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":9,\"id\":\"4a3dd710-cb6d-11e7-90fb-2dc563d1a10a\",\"panelIndex\":19,\"row\":1,\"size_x\":2,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"2bb12140-cb8f-11e7-9d69-3f936a8e192c\",\"panelIndex\":26,\"row\":11,\"size_x\":6,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"e581cb90-cbb4-11e7-9506-83f80dc472f7\",\"panelIndex\":30,\"row\":16,\"size_x\":12,\"size_y\":18,\"type\":\"visualization\"},{\"col\":9,\"id\":\"5e8ef970-cd9c-11e7-820a-a3e7b4e80b74\",\"panelIndex\":42,\"row\":4,\"size_x\":4,\"size_y\":3,\"type\":\"visualization\"},{\"col\":9,\"id\":\"916ae980-d030-11e7-8147-a11cbd784dca\",\"panelIndex\":46,\"row\":7,\"size_x\":2,\"size_y\":9,\"type\":\"visualization\"},{\"col\":11,\"id\":\"0c6c0470-d031-11e7-8147-a11cbd784dca\",\"panelIndex\":47,\"row\":7,\"size_x\":2,\"size_y\":9,\"type\":\"visualization\"},{\"col\":1,\"id\":\"58182ac0-d0e0-11e7-b8b5-53de9373b904\",\"panelIndex\":48,\"row\":7,\"size_x\":6,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"e8dbc1d0-d0df-11e7-b8b5-53de9373b904\",\"panelIndex\":49,\"row\":5,\"size_x\":6,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"8a160f50-d0e1-11e7-b8b5-53de9373b904\",\"panelIndex\":50,\"row\":3,\"size_x\":6,\"size_y\":2,\"type\":\"visualization\"},{\"col\":11,\"id\":\"26115aa0-d0e1-11e7-b8b5-53de9373b904\",\"panelIndex\":51,\"row\":1,\"size_x\":2,\"size_y\":3,\"type\":\"visualization\"},{\"col\":7,\"id\":\"40a941b0-d0e2-11e7-b8b5-53de9373b904\",\"panelIndex\":52,\"row\":1,\"size_x\":2,\"size_y\":15,\"type\":\"visualization\"},{\"col\":1,\"id\":\"44478c30-d0e4-11e7-b8b5-53de9373b904\",\"panelIndex\":53,\"row\":1,\"size_x\":6,\"size_y\":1,\"type\":\"visualization\"},{\"col\":1,\"id\":\"af43bdf0-d0e5-11e7-b8b5-53de9373b904\",\"panelIndex\":54,\"row\":9,\"size_x\":6,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"91612dd0-d0e6-11e7-b8b5-53de9373b904\",\"panelIndex\":56,\"row\":2,\"size_x\":6,\"size_y\":1,\"type\":\"visualization\"}]",
+      "optionsJSON": "{\"darkTheme\":true}",
+      "uiStateJSON": "{\"P-15\":{\"vis\":{\"legendOpen\":false}},\"P-19\":{\"spy\":{\"mode\":{\"fill\":false,\"name\":null}}},\"P-26\":{\"vis\":{\"legendOpen\":false}},\"P-30\":{\"mapCenter\":[23.73657113061083,0],\"mapZoom\":3},\"P-39\":{\"vis\":{\"legendOpen\":false}},\"P-42\":{\"vis\":{\"legendOpen\":false}},\"P-48\":{\"vis\":{\"legendOpen\":false}},\"P-49\":{\"vis\":{\"legendOpen\":false}},\"P-50\":{\"vis\":{\"legendOpen\":false}},\"P-54\":{\"vis\":{\"legendOpen\":false}}}",
+      "version": 1,
+      "timeRestore": true,
+      "timeTo": "now",
+      "timeFrom": "now-8h",
+      "refreshInterval": {
+        "display": "30 minutes",
+        "pause": false,
+        "section": 2,
+        "value": 1800000
+      },
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}}}]}"
+      }
+    }
+  }
+]
