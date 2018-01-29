@@ -102,7 +102,7 @@ _will only have_ the data that you mlog from geth until you run it with mlog tom
 Turn Filebeat on:
 
 ```
-$ filebeat -e -c $(pwd|echo path/to/this/dir)/filebeat.geth.mlog.json.yml -d "publish"
+$ filebeat -e -path.config=. -c filebeat.geth.mlog.json.yml -d "publish"
 ```
 
 > Filebeat config: [./filebeat.geth.mlog.json.yml](./filebeat.geth.mlog.json.yml)
