@@ -6,4 +6,8 @@ filebeat.prospectors:
   json.message_key: event
   json.keys_under_root: true
 output.logstash:
-  hosts: ["localhost:5043"]
+  # hosts: ["localhost:5043"]
+  hosts: ["192.168.99.100:5000"]
+  # This is will set the index prefix for elasticsearch indices. Important when
+  # aggregating logs from multiple machines and instances.
+  index: "etcdev-isaac"
