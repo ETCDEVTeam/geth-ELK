@@ -1,0 +1,27 @@
+[
+  {
+    "_id": "98876010-cd86-11e7-b1d1-d72fcd73a57d",
+    "_type": "dashboard",
+    "_source": {
+      "title": "geth-miners/mining-dash",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"col\":1,\"id\":\"ba238f40-d016-11e7-8147-a11cbd784dca\",\"panelIndex\":37,\"row\":1,\"size_x\":10,\"size_y\":6,\"type\":\"visualization\"},{\"col\":11,\"id\":\"2baadd20-d018-11e7-8147-a11cbd784dca\",\"panelIndex\":38,\"row\":1,\"size_x\":2,\"size_y\":15,\"type\":\"visualization\"},{\"col\":1,\"id\":\"2247d920-d029-11e7-8147-a11cbd784dca\",\"panelIndex\":39,\"row\":7,\"size_x\":10,\"size_y\":9,\"type\":\"visualization\"},{\"col\":1,\"id\":\"aa566560-d0bb-11e7-ba78-8b56809a1524\",\"panelIndex\":41,\"row\":28,\"size_x\":12,\"size_y\":20,\"type\":\"visualization\"},{\"col\":1,\"id\":\"9e30d940-d0bc-11e7-ba78-8b56809a1524\",\"panelIndex\":42,\"row\":16,\"size_x\":12,\"size_y\":12,\"type\":\"visualization\"}]",
+      "optionsJSON": "{\"darkTheme\":true}",
+      "uiStateJSON": "{}",
+      "version": 1,
+      "timeRestore": true,
+      "timeTo": "now",
+      "timeFrom": "now-48h",
+      "refreshInterval": {
+        "display": "30 minutes",
+        "pause": false,
+        "section": 2,
+        "value": 1800000
+      },
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}}}]}"
+      }
+    }
+  }
+]
