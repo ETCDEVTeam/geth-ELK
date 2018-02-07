@@ -13,5 +13,19 @@ output.logstash:
   # ssl.key: "/usr/local/etc/filebeat/etcdevmon.logstash.key"
   # This is will set the index prefix for elasticsearch indices. Important when
   # aggregating logs from multiple machines and instances.
-  index: "etcdev-mainnet-isaac"
+  index: "etcdev-isaac"
+  # use tags instead of setting fields. they seem to be pretty similar
+  tags: ["mainnet", "isaac", "osx"]
+  # only send up recent stuff to keep things lightweight (until i figure out
+  # rotation)
+  ignore_older: "5h"
+  # registry maintenance
+  close_inactive: "4h"
+  close_renamed: true
+  clean_inactive: true
+  clean_removed: true
+  # start reading at bottom, not top
+  tail_files: true
+
+
 
