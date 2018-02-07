@@ -1,0 +1,22 @@
+filebeat.prospectors:
+- input_type: log
+  paths:
+    - /Users/ia/Library/EthereumClassic/mainnet/mlogs/geth*
+  fields:
+    logzio_codec: json
+    token: FrEVZsMagwrccEigEtJAlHIlHxFtfAZd
+    type: gethclient
+  fields_under_root: true
+  encoding: utf-8
+  ignore_older: 3h
+  symlinks: true
+  json.message_key: event
+  json.keys_under_root: true
+output.logstash:
+  # hosts: ["localhost:5043"]
+  hosts: ["listener.logz.io:5015"]
+  ssl:
+    certificate_authorities: ['/etc/pki/tls/certs/COMODORSADomainValidationSecureServerCA.crt']
+  # This is will set the index prefix for elasticsearch indices. Important when
+  # aggregating logs from multiple machines and instances.
+  index: "etcdev-isaac"

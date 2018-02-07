@@ -3,15 +3,13 @@ filebeat.prospectors:
   paths:
     - /Users/ia/Library/EthereumClassic/mainnet/mlogs/geth*
   symlinks: true
-  exclude_files: ['\.gz$']
   json.message_key: event
   json.keys_under_root: true
 output.logstash:
-  # hosts: ["192.168.99.100:5000"]
   hosts: ["178.62.224.190:5000"]
-  # ssl.certificate: "/usr/local/etc/filebeat/etcdevmon.logstash.crt"
-  # ssl.key: "/usr/local/etc/filebeat/etcdevmon.logstash.key"
+  ssl.certificate: "/usr/local/etc/filebeat/etcdevmon.logstash.crt"
+  ssl.key: "/usr/local/etc/filebeat/etcdevmon.logstash.key"
   # This is will set the index prefix for elasticsearch indices. Important when
   # aggregating logs from multiple machines and instances.
-  index: "etcdev-mainnet-isaac"
+  index: "etcdev-isaac"
 
